@@ -1,0 +1,31 @@
+task: age
+augmentation:
+  color_jitter:
+    brightness: 0.8
+    contrast: 0.8
+    hue: 0.2
+    saturation: 0.8
+  crop_scale:
+  - 0.08
+  - 1.0
+  crop_size:
+  - 224
+  - 224
+  kernel_size: 12
+  max_sigma: 2.0
+  min_sigma: 0.1
+  strength: 1.0
+base:
+  best_model_dir: best_model
+  device: cuda
+  experiment_name: simclr_experiment
+  features_dir: features
+  log_dir: logs
+  num_workers: 2
+  plots_dir: plots
+  save_dir: checkpoints
+  seed: 42
+  use_custom_weight: true
+  custom_weight_path: /work/zichen0725/simclr/experiments_results_20250601_193051/best_model/encoder_best.pth
+training:
+  epochs: 100
