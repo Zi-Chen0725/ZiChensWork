@@ -106,6 +106,3 @@ training:
   temperature: 0.4     # 對比學習溫度係數
   early_stopping_patience: 10  # 早停耐心值
 ```
-## 授權
-
-本項目採用 MIT 授權協議。 
